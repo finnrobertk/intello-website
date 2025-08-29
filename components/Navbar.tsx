@@ -1,18 +1,19 @@
 "use client";
 import Link from 'next/link';
-import {useLocale} from 'next-intl';
+import {useLocale, useTranslations} from 'next-intl';
 import {useState} from 'react';
 import LanguageToggle from './LanguageToggle';
 
 export default function Navbar() {
   const locale = useLocale();
+  const t = useTranslations('Nav');
   const [open, setOpen] = useState(false);
 
   const links = [
-    { href: `/${locale}`, label: 'Home' },
-    { href: `/${locale}/about`, label: 'About' },
-    { href: `/${locale}/projects`, label: 'Projects' },
-    { href: `/${locale}/contact`, label: 'Contact' },
+    { href: `/${locale}`, label: t('home') },
+    { href: `/${locale}/about`, label: t('about') },
+    { href: `/${locale}/projects`, label: t('projects') },
+    { href: `/${locale}/contact`, label: t('contact') },
   ];
 
   return (

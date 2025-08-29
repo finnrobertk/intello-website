@@ -30,5 +30,22 @@
       "title": "Contact",
       "body": "Reach out at contact@intello.no"
     }
+  },
+  "ProjectList": {
+    "spk": {
+      "title": "SPK: Migration to microservices",
+      "description": "Led architecture and implementation to decompose a monolith into independently deployable microservices.",
+      "tags": ["Kotlin", "Java", "Microservices"]
+    },
+    "artemova": {
+      "title": "Artemova.no: Next.js beauty salon site",
+      "description": "Designed and built a fast, SEO-friendly marketing site with modern React tooling.",
+      "tags": ["React"]
+    },
+    "aimvp": {
+      "title": "AI MVP: Auto test generation",
+      "description": "Prototyped an AI-powered tool that generates unit tests from code and specs to accelerate QA.",
+      "tags": ["AI", "React"]
+    }
   }
 }

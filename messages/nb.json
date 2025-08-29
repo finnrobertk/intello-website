@@ -31,4 +31,22 @@
       "body": "Ta kontakt på contact@intello.no"
     }
   }
+  ,
+  "ProjectList": {
+    "spk": {
+      "title": "SPK: Migrering til mikrotjenester",
+      "description": "Ledet arkitektur og implementasjon for å dele opp en monolitt i selvstendige mikrotjenester.",
+      "tags": ["Kotlin", "Java", "Mikrotjenester"]
+    },
+    "artemova": {
+      "title": "Artemova.no: Next.js-side for salong",
+      "description": "Designet og bygget et raskt, SEO-vennlig nettsted med moderne React-verktøy.",
+      "tags": ["React"]
+    },
+    "aimvp": {
+      "title": "AI MVP: Automatisk testgenerering",
+      "description": "Prototypet et AI-verktøy som genererer enhetstester fra kode og spesifikasjoner for å effektivisere QA.",
+      "tags": ["AI", "React"]
+    }
+  }
 }
