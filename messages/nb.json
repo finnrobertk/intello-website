@@ -18,9 +18,14 @@
     "norwegian": "Norsk"
   },
   "Pages": {
+    "home": {
+      "intro": "Jeg hjelper selskaper med å modernisere systemer, bygge skalerbare løsninger i skyen og utforske nye muligheter med AI. Med 20+ års erfaring som utvikler og arkitekt skaper jeg løsninger som gir verdi og varig effekt.",
+      "cta": "Les mer om meg",
+      "contactCta": "Kontakt meg"
+    },
     "about": {
       "title": "Om Intello",
-      "body": "Vi er et konsulentselskap som leverer tjenester innen produkt, design og utvikling."
+      "body": "Jeg heter Finn-Robert Kristensen og driver Intello Group AS, et selvstendig konsulentselskap innen programvareutvikling og arkitektur.\nMed over 20 års erfaring fra IT-bransjen har jeg jobbet med alt fra komplekse monolitter til moderne mikrotjenestearkitektur, skyplattformer og AI-drevne løsninger.\nJeg brenner for å skape robuste, skalerbare og enkle løsninger som gir verdi for kundene – enten det handler om å modernisere en eksisterende kodebase, bygge nye systemer i skyen, eller utforske mulighetene med generativ AI.\nDe siste årene har jeg blant annet:\nLedet moderniseringen av pensjonsløsninger i Statens pensjonskasse (SPK) til mikrotjenester.\nBygget en komplett nettside og bookingløsning for en skjønnhetssalong med Next.js og Sanity.\nUtforsket MVP-løsninger for automatisert testgenerering med AI.\nVerdiene mine er klarhet, presisjon og samarbeid. Jeg liker å finne de gode løsningene sammen med kunden – og levere med høy kvalitet."
     },
     "projects": {
       "title": "Prosjekter",
