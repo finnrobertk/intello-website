@@ -1,0 +1,33 @@
+{
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "title": "Intello — Consulting for modern software",
+    "subtitle": "We help teams design, build and scale reliable products."
+  },
+  "Footer": {
+    "copyright": "© {year} Intello. All rights reserved."
+  },
+  "Language": {
+    "english": "English",
+    "norwegian": "Norsk"
+  },
+  "Pages": {
+    "about": {
+      "title": "About Intello",
+      "body": "We are a consulting company providing product, design and engineering services."
+    },
+    "projects": {
+      "title": "Projects",
+      "empty": "We will showcase selected client work here."
+    },
+    "contact": {
+      "title": "Contact",
+      "body": "Reach out at contact@intello.no"
+    }
+  }
+}

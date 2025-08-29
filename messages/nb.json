@@ -1,0 +1,33 @@
+{
+  "Nav": {
+    "home": "Hjem",
+    "about": "Om oss",
+    "projects": "Prosjekter",
+    "contact": "Kontakt"
+  },
+  "Hero": {
+    "title": "Intello — Rådgivning for moderne programvare",
+    "subtitle": "Vi hjelper team med å designe, bygge og skalere pålitelige produkter."
+  },
+  "Footer": {
+    "copyright": "© {year} Intello. Alle rettigheter forbeholdt."
+  },
+  "Language": {
+    "english": "English",
+    "norwegian": "Norsk"
+  },
+  "Pages": {
+    "about": {
+      "title": "Om Intello",
+      "body": "Vi er et konsulentselskap som leverer tjenester innen produkt, design og utvikling."
+    },
+    "projects": {
+      "title": "Prosjekter",
+      "empty": "Vi vil vise frem utvalgte kundecase her."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "body": "Ta kontakt på contact@intello.no"
+    }
+  }
+}
