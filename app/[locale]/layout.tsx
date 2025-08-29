@@ -5,7 +5,6 @@ import {Locale} from '@/i18n';
 import '../globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import LanguageToggle from '@/components/LanguageToggle';
 
 export const metadata: Metadata = {
   title: 'Intello',
@@ -28,11 +27,8 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages} locale={params.locale}>
-      <header className="flex items-center justify-between py-6">
-        <Navbar />
-        <LanguageToggle />
-      </header>
-      <main className="antialiased max-w-5xl mx-auto px-6">{children}</main>
+      <Navbar />
+      <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10 antialiased">{children}</main>
       <Footer />
     </NextIntlClientProvider>
   );

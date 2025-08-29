@@ -6,8 +6,9 @@
     "contact": "Kontakt"
   },
   "Hero": {
-    "title": "Intello — Rådgivning for moderne programvare",
-    "subtitle": "Vi hjelper team med å designe, bygge og skalere pålitelige produkter."
+    "title": "Selvstendig IT-arkitekt",
+    "subtitle": "Skaper skalerbare systemer med oversikt",
+    "cta": "Lei meg"
   },
   "Footer": {
     "copyright": "© {year} Intello. Alle rettigheter forbeholdt."

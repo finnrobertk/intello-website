@@ -6,8 +6,9 @@
     "contact": "Contact"
   },
   "Hero": {
-    "title": "Intello — Consulting for modern software",
-    "subtitle": "We help teams design, build and scale reliable products."
+    "title": "Independent Software Architect",
+    "subtitle": "Building scalable systems with clarity",
+    "cta": "Hire me"
   },
   "Footer": {
     "copyright": "© {year} Intello. All rights reserved."
