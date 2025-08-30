@@ -1,11 +1,46 @@
-import {useTranslations} from 'next-intl';
+import fs from 'node:fs';
+import path from 'node:path';
+import {notFound} from 'next/navigation';
+import {setRequestLocale} from 'next-intl/server';
+import {MDXRemote} from 'next-mdx-remote/rsc';
 
-export default function AboutPage() {
-  const t = useTranslations('Pages.about');
+type PageProps = {params: Promise<{locale: string}>};
+
+const SUPPORTED_LOCALES = ['en', 'nb'] as const;
+type Locale = (typeof SUPPORTED_LOCALES)[number];
+
+function resolveLocale(localeParam: string): Locale {
+  return (SUPPORTED_LOCALES as readonly string[]).includes(localeParam)
+    ? (localeParam as Locale)
+    : 'en';
+}
+
+function readAboutMdx(locale: Locale): string | null {
+  const filePath = path.join(process.cwd(), 'content', 'about', `${locale}.mdx`);
+  if (!fs.existsSync(filePath)) return null;
+  return fs.readFileSync(filePath, 'utf8');
+}
+
+export default async function AboutPage({params}: PageProps) {
+  const { locale: rawLocale } = await params;
+  setRequestLocale(rawLocale);
+
+  const locale = resolveLocale(rawLocale);
+  let source = readAboutMdx(locale);
+
+  if (!source && locale !== 'en') {
+    source = readAboutMdx('en');
+  }
+
+  if (!source) {
+    notFound();
+  }
+
   return (
-    <div className="space-y-2">
-      <h1 className="text-2xl font-bold">{t('title')}</h1>
-      <p className="text-gray-600 dark:text-gray-300">{t('body')}</p>
-    </div>
+    <main className="mx-auto max-w-3xl px-4 md:px-0 py-12 md:py-16 space-y-8 md:space-y-10">
+      <article className="prose prose-slate dark:prose-invert">
+        <MDXRemote source={source} />
+      </article>
+    </main>
   );
 }

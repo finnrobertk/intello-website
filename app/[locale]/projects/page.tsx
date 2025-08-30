@@ -1,9 +1,15 @@
-import {useTranslations} from 'next-intl';
+import {getTranslations, setRequestLocale} from 'next-intl/server';
 import ProjectCard from '@/components/ProjectCard';
 
-export default function ProjectsPage() {
-  const t = useTranslations('Pages.projects');
-  const p = useTranslations('ProjectList');
+export default async function ProjectsPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('Pages.projects');
+  const p = await getTranslations('ProjectList');
 
   return (
     <div className="space-y-6">
@@ -28,3 +34,4 @@ export default function ProjectsPage() {
     </div>
   );
 }
+

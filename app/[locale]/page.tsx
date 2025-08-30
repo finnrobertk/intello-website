@@ -1,10 +1,11 @@
 import HeroSection from '@/components/HeroSection';
-import {getTranslations} from 'next-intl/server';
+import {getTranslations, setRequestLocale} from 'next-intl/server';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import type { Locale } from '@/i18n';
 
-export default async function HomePage({ params }: { params: { locale: Locale } }) {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations('Pages.home');
 
   return (
@@ -15,10 +16,10 @@ export default async function HomePage({ params }: { params: { locale: Locale } 
           {t('intro')}
         </p>
         <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link href={`/${params.locale}/about`} className="w-full sm:w-auto">
+          <Link href={`/${locale}/about`} className="w-full sm:w-auto">
             <Button variant="default" className="w-full sm:w-auto">{t('cta')}</Button>
           </Link>
-          <Link href={`/${params.locale}/contact`} className="w-full sm:w-auto">
+          <Link href={`/${locale}/contact`} className="w-full sm:w-auto">
             <Button variant="outline" className="w-full sm:w-auto">{t('contactCta')}</Button>
           </Link>
         </div>
@@ -26,3 +27,4 @@ export default async function HomePage({ params }: { params: { locale: Locale } 
     </div>
   );
 }
+

@@ -1,7 +1,7 @@
 "use client";
 import Link from 'next/link';
 import {useLocale, useTranslations} from 'next-intl';
-import {useState} from 'react';
+import {useState, Suspense} from 'react';
 import LanguageToggle from './LanguageToggle';
 
 export default function Navbar() {
@@ -41,7 +41,9 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <LanguageToggle />
+          <Suspense fallback={null}>
+            <LanguageToggle />
+          </Suspense>
         </div>
 
         <button
@@ -83,7 +85,9 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="pt-2">
-                <LanguageToggle />
+                <Suspense fallback={null}>
+                  <LanguageToggle />
+                </Suspense>
               </div>
             </div>
           </div>

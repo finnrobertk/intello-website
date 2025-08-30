@@ -17,23 +17,27 @@ const en = {
     english: "English",
     norwegian: "Norsk",
   },
+  about: {
+    title: "About Intello",
+    paragraphs: [
+      "My name is Finn-Robert Kristensen, and I run Intello Group AS, an independent consultancy for software development and architecture.",
+      "With more than 20 years of experience, I have worked on everything from complex legacy monoliths to modern microservices, cloud platforms, and AI-driven solutions.",
+      "I focus on building robust, scalable, and simple systems that deliver real value."
+    ],
+    highlightsTitle: "Recent highlights include:",
+    highlights: [
+      "Modernizing pension solutions at the Norwegian Public Service Pension Fund (SPK) into microservices.",
+      "Building a complete website and booking system using Next.js and Sanity.",
+      "Exploring MVP solutions for automated test generation with AI."
+    ],
+    values: "My core values are clarity, precision, and collaboration."
+  },
   Pages: {
     home: {
       intro:
         "I help companies modernize systems, build scalable cloud solutions, and explore new opportunities with AI. With 20+ years of experience as a developer and architect, I create solutions that deliver lasting value.",
       cta: "Read more",
       contactCta: "Contact",
-    },
-    about: {
-      title: "About Intello",
-      body: `My name is Finn-Robert Kristensen, and I run Intello Group AS, an independent consultancy for software development and architecture.
-With more than 20 years of experience in the IT industry, I have worked on everything from complex legacy monoliths to modern microservice architectures, cloud platforms, and AI-driven solutions.
-I am passionate about creating robust, scalable, and simple systems that deliver real value – whether that means modernizing an existing codebase, building new cloud-native services, or exploring opportunities with generative AI.
-In recent years, I have:
-Led the modernization of pension solutions at the Norwegian Public Service Pension Fund (SPK) into microservices.
-Built a complete website and booking system for a beauty salon using Next.js and Sanity.
-Explored MVP solutions for automated test generation with AI.
-My core values are clarity, precision, and collaboration. I enjoy working closely with clients to find the right solutions – and delivering with high quality.`,
     },
     projects: {
       title: "Projects",
