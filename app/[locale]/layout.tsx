@@ -7,7 +7,14 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Intello',
-  description: 'Intello consulting company website'
+  description: 'Intello consulting company website',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', type: 'image/x-icon' },
+    ],
+    shortcut: '/favico.ico',
+    apple: '/Favicon Original.ico'
+  }
 };
 
 export function generateStaticParams() {

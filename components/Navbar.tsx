@@ -3,6 +3,7 @@ import Link from 'next/link';
 import {useLocale, useTranslations} from 'next-intl';
 import {useState, Suspense} from 'react';
 import LanguageToggle from './LanguageToggle';
+import IconLogo from '@/components/brand/IconLogo';
 
 export default function Navbar() {
   const locale = useLocale();
@@ -22,10 +23,13 @@ export default function Navbar() {
         <div className="flex items-center gap-8">
           <Link
             href={`/${locale}`}
-            className="font-semibold text-neutral-900 transition-colors hover:text-neutral-700 dark:text-neutral-100 dark:hover:text-neutral-300"
+            className="flex items-center gap-2 font-semibold text-neutral-900 transition-colors hover:text-neutral-700 dark:text-neutral-100 dark:hover:text-neutral-300"
             aria-label="Intello Home"
           >
-            Intello
+            {/* Icon visible on all sizes; color via Tailwind on the SVG */}
+            <IconLogo className="h-6 w-6 text-primary dark:text-white" />
+            {/* Wordmark on md+ */}
+            <span className="hidden md:inline">Intello</span>
           </Link>
           <div className="hidden md:flex md:items-center md:gap-6 text-sm text-neutral-600 dark:text-neutral-300">
             {links.map((l) => (

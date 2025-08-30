@@ -34,7 +34,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <TechStackGrouped items={techStack} compact dividers />
           <Link
             href={`/${locale}/about`}
-            className="text-sm font-medium text-blue-600 dark:text-blue-400 underline underline-offset-4 hover:opacity-80 mt-4 block text-center"
+            className="text-sm font-medium text-primary underline underline-offset-4 hover:opacity-80 mt-4 block text-center"
           >
             {t('viewDetails')}
           </Link>

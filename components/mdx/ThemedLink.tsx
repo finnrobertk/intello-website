@@ -8,7 +8,7 @@ export default function ThemedLink({ className, underline=true, ...props }: Prop
     <Link
       {...props}
       className={cn(
-        "font-medium text-blue-600 dark:text-blue-400 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-500/30 rounded",
+        "font-medium text-primary hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary/30 rounded",
         underline && "underline underline-offset-4",
         className
       )}

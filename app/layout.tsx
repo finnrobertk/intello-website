@@ -15,6 +15,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Intello",
   description: "Intello consulting company website",
+  icons: {
+    icon: [
+      { url: "/Favicon Transparent.ico", type: "image/x-icon" },
+      { url: "/Favicon Original.ico", type: "image/x-icon" }
+    ],
+    shortcut: "/Favicon Transparent.ico",
+    apple: "/Favicon Original.ico"
+  }
 };
 
 export default function RootLayout({
@@ -23,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
     </html>
   );
