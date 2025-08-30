@@ -1,25 +1,59 @@
-export default function Footer() {
+import { useTranslations } from "next-intl";
+import { Mail } from "lucide-react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+
+type Props = {
+  linkedinUrl?: string;
+  githubUrl?: string;
+  email?: string;
+};
+
+export default function Footer({
+  linkedinUrl = "https://www.linkedin.com/in/finnrobert",
+  githubUrl = "https://github.com/finnrobertk",
+  email = "hello@intello.no",
+}: Props) {
+  const t = useTranslations("footer");
+
+  const iconBase =
+    "h-5 w-5 transition-colors transition-transform duration-200 ease-out hover:scale-110";
+
   return (
-    <footer className="w-full border-t">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 py-8 text-sm text-neutral-500 sm:flex-row sm:px-6 dark:text-neutral-400">
-        <div className="flex items-center gap-2">
-          <span className="font-medium text-neutral-800 dark:text-neutral-200">Intello</span>
-          <span>© 2025</span>
-        </div>
+    <footer className="border-t mt-12 py-6">
+      <div className="mx-auto max-w-6xl px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+        <p>
+          © {new Date().getFullYear()} Intello. {t("rights")}
+        </p>
         <div className="flex items-center gap-4">
+          {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/"
+            href={linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-colors hover:text-neutral-700 dark:hover:text-neutral-200"
+            className="hover:text-[#0A66C2]"
+            aria-label="LinkedIn"
           >
-            LinkedIn
+            <FaLinkedin className={iconBase} />
           </a>
+
+          {/* GitHub */}
           <a
-            href="mailto:hello@intello.no"
-            className="transition-colors hover:text-neutral-700 dark:hover:text-neutral-200"
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#181717] dark:hover:text-gray-300"
+            aria-label="GitHub"
           >
-            Email
+            <FaGithub className={iconBase} />
+          </a>
+
+          {/* Email */}
+          <a
+            href={`mailto:${email}`}
+            className="hover:text-emerald-500"
+            aria-label="Send email"
+          >
+            <Mail className={iconBase} />
           </a>
         </div>
       </div>

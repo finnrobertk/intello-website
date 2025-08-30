@@ -2,19 +2,23 @@
 
 import { useTranslations } from "next-intl";
 import { Mail } from "lucide-react";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 type Props = {
   linkedinUrl?: string;
+  githubUrl?: string;
   email?: string;
 };
 
 export default function Footer({
-  linkedinUrl = "https://www.linkedin.com/in/your-handle",
+  linkedinUrl = "https://www.linkedin.com/in/finnrobert/",
+  githubUrl = "https://github.com/finnrobertk",
   email = "hello@intello.no",
 }: Props) {
   const t = useTranslations("footer");
   const year = new Date().getFullYear();
+  // SVGs inherit color from <a> (currentColor). Scale triggers on link hover via group.
+  const iconBase = "h-5 w-5 transition-transform duration-200 ease-out group-hover:scale-110";
 
   return (
     <footer className="border-t mt-12 py-6">
@@ -23,21 +27,33 @@ export default function Footer({
           © {year} Intello. {t("rights")}
         </p>
         <div className="flex items-center gap-4">
+          {/* LinkedIn */}
           <a
             href={linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-colors hover:text-primary"
             aria-label="LinkedIn"
+            className="group transition-colors hover:text-[#0A66C2]"
           >
-            <FaLinkedin className="h-5 w-5" />
+            <FaLinkedin className={iconBase} />
           </a>
+          {/* GitHub */}
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="group transition-colors hover:text-[#181717] dark:hover:text-gray-300"
+          >
+            <FaGithub className={iconBase} />
+          </a>
+          {/* Email */}
           <a
             href={`mailto:${email}`}
-            className="transition-colors hover:text-primary"
             aria-label="Send email"
+            className="group transition-colors hover:text-emerald-500"
           >
-            <Mail className="h-5 w-5" />
+            <Mail className={iconBase} />
           </a>
         </div>
       </div>
