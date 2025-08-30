@@ -82,6 +82,30 @@ const nb = {
       tags: ["AI", "React"],
     },
   },
+  contact: {
+    title: "Kontakt",
+    intro: "La oss jobbe sammen. Send en kort melding så tar jeg kontakt.",
+    name: "Navn",
+    email: "E-post",
+    message: "Melding",
+    placeholder: {
+      name: "Ditt navn",
+      email: "deg@eksempel.no",
+      message: "Fortell kort om behovet, tidsramme og mål...",
+    },
+    submit: "Send melding",
+    sending: "Sender...",
+    successTitle: "Takk!",
+    successBody: "Meldingen er sendt. Jeg svarer så snart jeg kan.",
+    errorTitle: "Noe gikk galt",
+    errorBody: "Prøv igjen, eller send meg en e-post direkte.",
+    alt: {
+      title: "Foretrekker du noe annet?",
+      linkedin: "Koble på LinkedIn",
+      github: "Se GitHub",
+      email: "Send e-post",
+    },
+  },
 } as const;
 
 export default nb;

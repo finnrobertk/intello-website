@@ -82,6 +82,30 @@ const en = {
       tags: ["AI", "React"],
     },
   },
+  contact: {
+    title: "Contact",
+    intro: "Let’s work together. Send a short message and I’ll get back to you.",
+    name: "Name",
+    email: "Email",
+    message: "Message",
+    placeholder: {
+      name: "Your name",
+      email: "you@example.com",
+      message: "Tell me a bit about your project, timeline and goals...",
+    },
+    submit: "Send message",
+    sending: "Sending...",
+    successTitle: "Thanks!",
+    successBody: "Your message has been sent. I’ll get back to you shortly.",
+    errorTitle: "Something went wrong",
+    errorBody: "Please try again or email me directly.",
+    alt: {
+      title: "Prefer another channel?",
+      linkedin: "Connect on LinkedIn",
+      github: "View GitHub",
+      email: "Send an email",
+    },
+  },
 } as const;
 
 export default en;
