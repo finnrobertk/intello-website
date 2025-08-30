@@ -3,6 +3,7 @@ import {getTranslations, setRequestLocale} from 'next-intl/server';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import TechStack from '@/components/mdx/TechStack';
+import { techStack } from '@/config/tech-stack';
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -30,18 +31,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <section className="mt-12 md:mt-16">
         <div className="mx-auto max-w-3xl px-4 md:px-0">
           <h2 className="text-xl font-semibold tracking-tight mb-4">{t('techStackTitle')}</h2>
-          <TechStack
-            items={[
-              { label: 'Kotlin', category: 'backend' },
-              { label: 'Java', category: 'backend' },
-              { label: 'Spring Boot', category: 'backend' },
-              { label: 'Next.js', category: 'frontend' },
-              { label: 'React', category: 'frontend' },
-              { label: 'GCP', category: 'cloud' },
-              { label: 'Azure', category: 'cloud' },
-              { label: 'AI/ML', category: 'ai' }
-            ]}
-          />
+          <TechStack items={techStack} />
           <Link
             href={`/${locale}/about`}
             className="text-sm font-medium text-blue-600 dark:text-blue-400 underline underline-offset-4 hover:opacity-80 mt-4 block text-center"
