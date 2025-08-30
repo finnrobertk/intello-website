@@ -4,6 +4,7 @@ import {getMessages, setRequestLocale} from 'next-intl/server';
 import '../globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/site/Footer';
+import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
   title: 'Intello',
@@ -35,6 +36,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
+      <StructuredData locale={locale} />
       <Navbar />
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10 antialiased">{children}</main>
       <Footer />
