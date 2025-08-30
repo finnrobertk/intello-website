@@ -31,7 +31,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <section className="mt-12 md:mt-16">
         <div className="mx-auto max-w-3xl px-4 md:px-0">
           <h2 className="text-xl font-semibold tracking-tight mb-4">{t('techStackTitle')}</h2>
-          <TechStackGrouped items={techStack} />
+          <TechStackGrouped items={techStack} compact dividers />
           <Link
             href={`/${locale}/about`}
             className="text-sm font-medium text-blue-600 dark:text-blue-400 underline underline-offset-4 hover:opacity-80 mt-4 block text-center"
