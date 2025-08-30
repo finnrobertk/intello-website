@@ -13,6 +13,9 @@ const en = {
   Footer: {
     copyright: "© {year} Intello. All rights reserved.",
   },
+  footer: {
+    rights: "All rights reserved."
+  },
   Language: {
     english: "English",
     norwegian: "Norsk",

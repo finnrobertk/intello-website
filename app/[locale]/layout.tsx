@@ -3,7 +3,7 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, setRequestLocale} from 'next-intl/server';
 import '../globals.css';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Footer from '@/components/site/Footer';
 
 export const metadata: Metadata = {
   title: 'Intello',
