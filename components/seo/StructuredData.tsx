@@ -24,7 +24,7 @@ export default function StructuredData() {
 
   const serviceItems = (tServices.raw("what.items") as string[]) || [];
 
-  const graph: any[] = [
+  const graph: Array<Record<string, unknown>> = [
       {
         "@type": "Organization",
         "@id": orgId,
