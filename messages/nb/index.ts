@@ -38,6 +38,8 @@ const nb = {
         "Jeg hjelper selskaper med å modernisere systemer, bygge skalerbare løsninger i skyen og utforske nye muligheter med AI. Med 20+ års erfaring som utvikler og arkitekt skaper jeg løsninger som gir verdi og varig effekt.",
       cta: "Les mer om meg",
       contactCta: "Kontakt meg",
+      techStackTitle: "Teknologistack",
+      viewDetails: "Se mer",
     },
     projects: {
       title: "Prosjekter",

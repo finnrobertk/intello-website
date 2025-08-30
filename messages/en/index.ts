@@ -38,6 +38,8 @@ const en = {
         "I help companies modernize systems, build scalable cloud solutions, and explore new opportunities with AI. With 20+ years of experience as a developer and architect, I create solutions that deliver lasting value.",
       cta: "Read more",
       contactCta: "Contact",
+      techStackTitle: "Tech Stack",
+      viewDetails: "View details",
     },
     projects: {
       title: "Projects",

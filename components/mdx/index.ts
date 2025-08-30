@@ -1,3 +1,4 @@
+import TechStack from "./TechStack";
 import Callout from "./Callout";
 import ThemedLink from "./ThemedLink";
 import MdxImage from "./MdxImage";
@@ -18,6 +19,7 @@ export const mdxComponents = {
 
   // Custom components:
   Callout,
+  TechStack,
 };
 
 export type MdxComponents = typeof mdxComponents;
