@@ -115,6 +115,7 @@ const en = {
     intro: "Selected work highlighting architecture, cloud and AI.",
     readMore: "Read case",
     back: "Back to projects",
+    labels: { role: "Role", year: "Year", tags: "Tags" },
   },
 } as const;
 

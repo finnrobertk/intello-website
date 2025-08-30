@@ -115,6 +115,7 @@ const nb = {
     intro: "Utvalgte oppdrag innen arkitektur, sky og AI.",
     readMore: "Les case",
     back: "Tilbake til prosjekter",
+    labels: { role: "Rolle", year: "År", tags: "Stikkord" },
   },
 } as const;
 
