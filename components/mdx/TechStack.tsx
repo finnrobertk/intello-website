@@ -21,8 +21,8 @@ export default function TechStack({ items = techStack, size = "regular" }: { ite
           <span
             key={i}
             className={cn(
-              "flex items-center gap-2 rounded-full font-medium",
-              size === "compact" ? "px-2.5 py-0.5 text-xs" : "px-3 py-1 text-sm",
+              "flex h-9 items-center gap-2 rounded-full font-medium",
+              size === "compact" ? "px-2.5 text-xs" : "px-3 text-sm",
               COLORS[item.category ?? "other"]
             )}
           >

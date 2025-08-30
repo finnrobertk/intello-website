@@ -19,7 +19,7 @@ export default function HeroSection() {
         <p className="mx-auto mb-8 max-w-2xl text-base text-neutral-600 sm:text-lg dark:text-neutral-300">
           {t('subtitle')}
         </p>
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
           {/* Primary CTA: Hire me */}
           <Link href={`/${locale}/contact`}>
             <Button variant="default" className="bg-primary text-white hover:opacity-90">

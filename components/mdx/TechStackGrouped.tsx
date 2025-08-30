@@ -40,7 +40,7 @@ export default async function TechStackGrouped({
   }
 
   return (
-    <section className={className}>
+    <section className={cn("space-y-4 sm:space-y-0", className)}>
       {order
         .filter((cat) => {
           const list = map.get(cat) ?? [];
