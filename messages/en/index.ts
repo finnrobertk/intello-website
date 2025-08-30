@@ -117,6 +117,17 @@ const en = {
     back: "Back to projects",
     labels: { role: "Role", year: "Year", tags: "Tags" },
   },
+  services: {
+    what: {
+      items: [
+        "Software architecture & system design",
+        "Cloud-native development (GCP/Azure)",
+        "Legacy modernization",
+        "AI/ML integration and MVPs",
+        "Developer enablement & reviews"
+      ]
+    }
+  },
 } as const;
 
 export default en;

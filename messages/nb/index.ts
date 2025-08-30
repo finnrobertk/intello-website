@@ -117,6 +117,17 @@ const nb = {
     back: "Tilbake til prosjekter",
     labels: { role: "Rolle", year: "År", tags: "Stikkord" },
   },
+  services: {
+    what: {
+      items: [
+        "Programvarearkitektur og systemdesign",
+        "Sky-native utvikling (GCP/Azure)",
+        "Modernisering av legacy",
+        "AI/ML-integrasjon og MVP-er",
+        "Utviklerstøtte og code reviews"
+      ]
+    }
+  },
 } as const;
 
 export default nb;

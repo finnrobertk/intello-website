@@ -1,11 +1,12 @@
+"use client";
+
 import Script from "next/script";
+import { useTranslations, useLocale } from "next-intl";
 
-type Props = {
-  locale: string;
-};
-
-export default function StructuredData({ locale }: Props) {
+export default function StructuredData() {
+  const locale = useLocale();
   const isNb = locale?.startsWith("nb");
+  const tServices = useTranslations("services");
 
   const personJobTitle = isNb
     ? "Programvarearkitekt og selvstendig konsulent"
@@ -21,9 +22,9 @@ export default function StructuredData({ locale }: Props) {
 
   const orgId = "https://intello.no#organization";
 
-  const data = {
-    "@context": "https://schema.org",
-    "@graph": [
+  const serviceItems = (tServices.raw("what.items") as string[]) || [];
+
+  const graph: any[] = [
       {
         "@type": "Organization",
         "@id": orgId,
@@ -57,66 +58,30 @@ export default function StructuredData({ locale }: Props) {
           "https://www.linkedin.com/in/finnrobertk",
           "https://github.com/finnrobertk"
         ]
-      },
-      // Services (locale-aware)
-      {
-        "@type": "Service",
-        name: isNb ? "Programvarearkitektur og systemdesign" : "Software architecture & system design",
-        description: isNb
-          ? "Designer skalerbare og vedlikeholdbare programvaresystemer med klarhet."
-          : "Designing scalable, maintainable software systems with clarity.",
-        provider: { "@id": orgId },
-        serviceType: isNb ? "Arkitektur" : "Architecture",
-        inLanguage: isNb ? "nb" : "en"
-      },
-      {
-        "@type": "Service",
-        name: isNb ? "Sky-native utvikling (GCP/Azure)" : "Cloud-native development (GCP/Azure)",
-        description: isNb
-          ? "Utvikling av moderne applikasjoner på skyplattformer (GCP, Azure)."
-          : "Developing modern applications on cloud platforms (GCP, Azure).",
-        provider: { "@id": orgId },
-        serviceType: isNb ? "Skyutvikling" : "Cloud development",
-        inLanguage: isNb ? "nb" : "en"
-      },
-      {
-        "@type": "Service",
-        name: isNb ? "Modernisering av legacy" : "Legacy modernization",
-        description: isNb
-          ? "Transformerer monolittiske legacysystemer til moderne mikrotjenester."
-          : "Transforming monolithic legacy systems into modern microservices.",
-        provider: { "@id": orgId },
-        serviceType: isNb ? "Modernisering" : "Modernization",
-        inLanguage: isNb ? "nb" : "en"
-      },
-      {
-        "@type": "Service",
-        name: isNb ? "AI/ML-integrasjon og MVP-er" : "AI/ML integration and MVPs",
-        description: isNb
-          ? "Integrerer AI/ML i forretningssystemer og bygger MVP-er."
-          : "Integrating AI/ML into business systems and building MVPs.",
-        provider: { "@id": orgId },
-        serviceType: "AI/ML",
-        inLanguage: isNb ? "nb" : "en"
-      },
-      {
-        "@type": "Service",
-        name: isNb ? "Utviklerstøtte og code reviews" : "Developer enablement & reviews",
-        description: isNb
-          ? "Hjelper team med forbedring gjennom code reviews, mentoring og arkitekturstøtte."
-          : "Helping teams improve via code reviews, mentoring, and architectural guidance.",
-        provider: { "@id": orgId },
-        serviceType: isNb ? "Utviklerstøtte" : "Developer enablement",
-        inLanguage: isNb ? "nb" : "en"
       }
-    ]
+  ];
+
+  // Dynamically add Service entries from i18n
+  serviceItems.forEach((item, idx) => {
+    graph.push({
+      "@type": "Service",
+      "@id": `https://intello.no#service-${locale}-${idx}`,
+      name: item,
+      description: item,
+      provider: { "@id": orgId },
+      inLanguage: isNb ? "nb" : "en"
+    });
+  });
+
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": graph
   } as const;
 
   return (
     <Script
       id="schema-org"
       type="application/ld+json"
-      strategy="afterInteractive"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
   );
