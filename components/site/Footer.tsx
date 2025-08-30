@@ -23,17 +23,18 @@ export default function Footer({
   return (
     <footer className="border-t mt-12 py-6">
       <div className="mx-auto max-w-6xl px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-600 dark:text-neutral-300">
-        <p>
-          © {year} Intello. {t("rights")}
-        </p>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col items-center sm:items-start">
+          <p>© {year} Intello. {t("rights")}</p>
+          <p className="text-xs text-muted-foreground mt-1">Building scalable systems with clarity.</p>
+        </div>
+        <div className="mt-2 flex items-center gap-2 sm:gap-3">
           {/* LinkedIn */}
           <a
             href={linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="group transition-colors hover:text-[#0A66C2]"
+            className="group inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors hover:text-[#0A66C2]"
           >
             <FaLinkedin className={iconBase} />
           </a>
@@ -43,7 +44,7 @@ export default function Footer({
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="group transition-colors hover:text-[#181717] dark:hover:text-gray-300"
+            className="group inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors hover:text-[#181717] dark:hover:text-gray-300"
           >
             <FaGithub className={iconBase} />
           </a>
@@ -51,7 +52,7 @@ export default function Footer({
           <a
             href={`mailto:${email}`}
             aria-label="Send email"
-            className="group transition-colors hover:text-emerald-500"
+            className="group inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors hover:text-emerald-500"
           >
             <Mail className={iconBase} />
           </a>
