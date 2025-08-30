@@ -110,6 +110,12 @@ const en = {
       body: "Thanks for reaching out! I’ll get back to you shortly.",
     },
   },
+  projects: {
+    title: "Projects",
+    intro: "Selected work highlighting architecture, cloud and AI.",
+    readMore: "Read case",
+    back: "Back to projects",
+  },
 } as const;
 
 export default en;

@@ -110,6 +110,12 @@ const nb = {
       body: "Takk for at du tok kontakt! Jeg svarer deg så snart jeg kan.",
     },
   },
+  projects: {
+    title: "Prosjekter",
+    intro: "Utvalgte oppdrag innen arkitektur, sky og AI.",
+    readMore: "Les case",
+    back: "Tilbake til prosjekter",
+  },
 } as const;
 
 export default nb;
