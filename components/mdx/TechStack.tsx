@@ -26,7 +26,7 @@ export default function TechStack({ items = techStack, size = "regular" }: { ite
               COLORS[item.category ?? "other"]
             )}
           >
-            {Icon && <Icon className={cn(size === "compact" ? "h-3.5 w-3.5" : "h-4 w-4")} />}
+            {Icon && <Icon className="h-4 w-4" />}
             {item.label}
           </span>
         );
