@@ -15,9 +15,8 @@ export default function LanguageToggle() {
     <button
       className="rounded border px-3 py-1 text-sm hover:bg-gray-100 dark:hover:bg-gray-800"
       onClick={() => {
-        // Replace the first path segment (locale)
+        // Replace first path segment with the other locale
         const segments = pathname.split('/');
-        // ['', 'en', '...'] -> index 1
         if (segments.length > 1) {
           segments[1] = other;
         }
