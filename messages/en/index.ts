@@ -17,6 +17,14 @@ const en = {
     english: "English",
     norwegian: "Norsk",
   },
+  categories: {
+    backend: "Backend",
+    frontend: "Frontend",
+    cloud: "Cloud",
+    infra: "Infra / DevOps",
+    ai: "AI / ML",
+    other: "Other",
+  },
   about: {
     title: "About Intello",
     paragraphs: [

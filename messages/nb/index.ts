@@ -17,6 +17,14 @@ const nb = {
     english: "English",
     norwegian: "Norsk",
   },
+  categories: {
+    backend: "Backend",
+    frontend: "Frontend",
+    cloud: "Sky",
+    infra: "Infra / DevOps",
+    ai: "AI / ML",
+    other: "Annet",
+  },
   about: {
     title: "Om Intello",
     paragraphs: [
