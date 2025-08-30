@@ -1,0 +1,15 @@
+name: Ping search engines with updated sitemap
+
+on:
+  deployment_status:
+    types: [success]
+
+jobs:
+  ping:
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Google
+        run: curl "https://www.google.com/ping?sitemap=https://intello.no/sitemap.xml"
+      - name: Ping Bing
+        run: curl "https://www.bing.com/ping?sitemap=https://intello.no/sitemap.xml"
