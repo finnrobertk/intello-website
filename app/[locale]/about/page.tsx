@@ -3,6 +3,7 @@ import path from 'node:path';
 import {notFound} from 'next/navigation';
 import {setRequestLocale} from 'next-intl/server';
 import {MDXRemote} from 'next-mdx-remote/rsc';
+import { mdxComponents } from '@/components/mdx';
 
 type PageProps = {params: Promise<{locale: string}>};
 
@@ -39,7 +40,7 @@ export default async function AboutPage({params}: PageProps) {
   return (
     <main className="mx-auto max-w-3xl px-4 md:px-0 py-12 md:py-16 space-y-8 md:space-y-10">
       <article className="prose prose-slate dark:prose-invert">
-        <MDXRemote source={source} />
+        <MDXRemote source={source} components={mdxComponents} />
       </article>
     </main>
   );
