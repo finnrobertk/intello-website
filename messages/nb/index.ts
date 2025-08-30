@@ -105,6 +105,10 @@ const nb = {
       github: "Se GitHub",
       email: "Send e-post",
     },
+    sent: {
+      title: "Melding sendt",
+      body: "Takk for at du tok kontakt! Jeg svarer deg så snart jeg kan.",
+    },
   },
 } as const;
 

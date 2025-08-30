@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 // Replace with your Formspree form ID:
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mrbaqeqe";
 
 export default function ContactForm() {
   const t = useTranslations("contact");
+  const locale = useLocale();
   const [status, setStatus] = useState<"idle"|"sending"|"success"|"error">("idle");
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -31,10 +32,8 @@ export default function ContactForm() {
         body: data,
       });
       if (res.ok) {
-        setStatus("success");
         form.reset();
-        // focus message for screen readers
-        (document.getElementById("contact-success") as HTMLElement)?.focus?.();
+        window.location.href = `/${locale}/contact/sent`;
       } else {
         setStatus("error");
         (document.getElementById("contact-error") as HTMLElement)?.focus?.();
@@ -102,18 +101,6 @@ export default function ContactForm() {
       </div>
 
       {/* Status messages */}
-      {status === "success" && (
-        <div
-          id="contact-success"
-          tabIndex={-1}
-          className="rounded-md border border-emerald-600/30 bg-emerald-500/10 px-3 py-2 text-emerald-300"
-          role="status"
-          aria-live="polite"
-        >
-          <strong className="block">{t("successTitle")}</strong>
-          <span>{t("successBody")}</span>
-        </div>
-      )}
       {status === "error" && (
         <div
           id="contact-error"

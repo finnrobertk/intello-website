@@ -105,6 +105,10 @@ const en = {
       github: "View GitHub",
       email: "Send an email",
     },
+    sent: {
+      title: "Message sent",
+      body: "Thanks for reaching out! I’ll get back to you shortly.",
+    },
   },
 } as const;
 
