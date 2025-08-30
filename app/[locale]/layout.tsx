@@ -10,9 +10,10 @@ export const metadata: Metadata = {
   description: 'Intello consulting company website',
   icons: {
     icon: [
-      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/Favicon Transparent.ico', type: 'image/x-icon' },
+      { url: '/Favicon Original.ico', type: 'image/x-icon' }
     ],
-    shortcut: '/favico.ico',
+    shortcut: '/Favicon Transparent.ico',
     apple: '/Favicon Original.ico'
   }
 };
