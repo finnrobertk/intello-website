@@ -3,6 +3,7 @@ const en = {
     home: "Home",
     about: "About",
     projects: "Projects",
+    blog: "Blog",
     contact: "Contact",
   },
   Hero: {
@@ -126,6 +127,12 @@ const en = {
         "Developer enablement & reviews"
       ]
     }
+  },
+  blog: {
+    title: "Blog",
+    intro: "Articles on architecture, cloud, modernization and AI.",
+    readMore: "Read more",
+    back: "Back to blog",
   },
 } as const;
 

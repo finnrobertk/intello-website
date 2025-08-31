@@ -3,6 +3,7 @@ const nb = {
     home: "Hjem",
     about: "Om oss",
     projects: "Prosjekter",
+    blog: "Blogg",
     contact: "Kontakt",
   },
   Hero: {
@@ -126,6 +127,12 @@ const nb = {
         "Utviklerstøtte og code reviews"
       ]
     }
+  },
+  blog: {
+    title: "Blogg",
+    intro: "Artikler om arkitektur, sky, modernisering og AI.",
+    readMore: "Les mer",
+    back: "Tilbake til blogg",
   },
 } as const;
 
