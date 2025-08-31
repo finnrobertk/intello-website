@@ -5,12 +5,11 @@ import '../globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/site/Footer';
 import StructuredData from '@/components/seo/StructuredData';
-import { Geist, Geist_Mono } from 'next/font/google';
+// Fonts are applied in the root layout
 
 const SITE = 'https://intello.no';
 
-const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
-const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
+// Font variables are handled in the root layout
 
 type LocaleParams = { locale: string };
 
@@ -72,20 +71,13 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body
-        suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          <StructuredData />
-          <Navbar />
-          <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10 antialiased">
-            {children}
-          </main>
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages} locale={locale}>
+      <StructuredData />
+      <Navbar />
+      <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10 antialiased">
+        {children}
+      </main>
+      <Footer />
+    </NextIntlClientProvider>
   );
 }
