@@ -7,7 +7,7 @@ const nb = {
   },
   Hero: {
     title: "Selvstendig IT-arkitekt",
-    subtitle: "Skaper skalerbare systemer med oversikt",
+    subtitle: "Skaper skalerbare systemer med klarhet",
     cta: "Lei meg",
   },
   Footer: {
