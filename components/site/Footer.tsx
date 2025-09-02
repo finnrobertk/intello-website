@@ -2,17 +2,15 @@
 
 import { useTranslations } from "next-intl";
 import { Mail } from "lucide-react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 type Props = {
   linkedinUrl?: string;
-  githubUrl?: string;
   email?: string;
 };
 
 export default function Footer({
   linkedinUrl = "https://www.linkedin.com/in/finnrobert/",
-  githubUrl = "https://github.com/finnrobertk",
   email = "hello@intello.no",
 }: Props) {
   const t = useTranslations("footer");
@@ -37,16 +35,6 @@ export default function Footer({
             className="group inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors hover:text-[#0A66C2]"
           >
             <FaLinkedin className={iconBase} />
-          </a>
-          {/* GitHub */}
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="group inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors hover:text-[#181717] dark:hover:text-gray-300"
-          >
-            <FaGithub className={iconBase} />
           </a>
           {/* Email */}
           <a

@@ -102,7 +102,6 @@ const nb = {
     alt: {
       title: "Foretrekker du noe annet?",
       linkedin: "Koble på LinkedIn",
-      github: "Se GitHub",
       email: "Send e-post",
     },
     sent: {

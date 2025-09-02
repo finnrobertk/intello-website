@@ -34,8 +34,7 @@ export default function StructuredData() {
         description: orgDescription,
         inLanguage: isNb ? "nb" : "en",
         sameAs: [
-          "https://www.linkedin.com/in/finnrobertk",
-          "https://github.com/finnrobertk"
+          "https://www.linkedin.com/in/finnrobertk"
         ],
         contactPoint: [
           {
@@ -55,8 +54,7 @@ export default function StructuredData() {
         worksFor: { "@id": orgId },
         url: "https://intello.no",
         sameAs: [
-          "https://www.linkedin.com/in/finnrobertk",
-          "https://github.com/finnrobertk"
+          "https://www.linkedin.com/in/finnrobertk"
         ]
       }
   ];

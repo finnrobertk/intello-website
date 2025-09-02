@@ -102,7 +102,6 @@ const en = {
     alt: {
       title: "Prefer another channel?",
       linkedin: "Connect on LinkedIn",
-      github: "View GitHub",
       email: "Send an email",
     },
     sent: {

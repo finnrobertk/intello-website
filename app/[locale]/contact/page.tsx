@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import ContactForm from '@/components/contact/ContactForm';
 import { CONTACT } from '@/config/contact';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 import { Mail } from 'lucide-react';
 
 export default async function ContactPage({
@@ -35,15 +35,6 @@ export default async function ContactPage({
             >
               <FaLinkedin className="h-4 w-4" />
               <span>{t('alt.linkedin')}</span>
-            </a>
-            <a
-              href={CONTACT.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border px-3 py-2 hover:bg-accent transition"
-            >
-              <FaGithub className="h-4 w-4" />
-              <span>{t('alt.github')}</span>
             </a>
             <a
               href={`mailto:${CONTACT.email}`}
