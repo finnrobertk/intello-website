@@ -5,10 +5,8 @@ import '../globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/site/Footer';
 import StructuredData from '@/components/seo/StructuredData';
+import { SITE } from '@/config/site';
 // Fonts are applied in the root layout
-
-const SITE = 'https://intello.no';
-
 // Font variables are handled in the root layout
 
 type LocaleParams = { locale: string };
@@ -35,16 +33,19 @@ export async function generateMetadata({
     title: { default: 'Intello', template: '%s — Intello' },
     description: isNorwegian ? descriptionNb : descriptionEn,
     alternates: {
-      canonical: `${SITE}/${locale}`,
+      canonical: `${SITE.url}/${locale}`,
       languages: {
-        nb: `${SITE}/nb`,
-        en: `${SITE}/en`,
+        nb: `${SITE.url}/nb`,
+        en: `${SITE.url}/en`,
+      },
+      types: {
+        'application/rss+xml': `${SITE.url}/${locale}/blog/rss.xml`,
       },
     },
     openGraph: {
       title: 'Intello',
       description: isNorwegian ? descriptionNb : descriptionEn,
-      url: `${SITE}/${locale}`,
+      url: `${SITE.url}/${locale}`,
       siteName: 'Intello',
       locale: isNorwegian ? 'nb_NO' : 'en_US',
       alternateLocale: [isNorwegian ? 'en_US' : 'nb_NO'],
