@@ -70,7 +70,7 @@ const en = {
       tags: ["Kotlin", "Java", "Microservices"],
     },
     artemova: {
-      title: "Artemova.no: Next.js beauty salon site",
+      title: "naturligfake.no: Next.js beauty salon site",
       description:
         "Designed and built a fast, SEO-friendly marketing site with modern React tooling.",
       tags: ["React"],
