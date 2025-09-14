@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getProject } from "@/lib/projects";
@@ -13,7 +14,14 @@ export default async function ProjectDetail({
   setRequestLocale(locale);
   const t = await getTranslations("projects");
 
-  const { meta, content } = getProject(locale, slug);
+  let meta, content;
+  try {
+    const res = getProject(locale, slug);
+    meta = res.meta;
+    content = res.content;
+  } catch (e) {
+    notFound();
+  }
 
   return (
     <main className="mx-auto max-w-3xl px-4 md:px-0 py-12 md:py-16">

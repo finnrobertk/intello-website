@@ -18,17 +18,7 @@ const nextConfig: NextConfig = {
         destination: 'https://intello.no/:path*',
         permanent: true
       },
-      // Preserve old project slug URLs → new slug
-      {
-        source: '/projects/artemova-beauty',
-        destination: '/projects/naturlig-fake',
-        permanent: true
-      },
-      {
-        source: '/:locale(en|nb)/projects/artemova-beauty',
-        destination: '/:locale/projects/naturlig-fake',
-        permanent: true
-      }
+      // Removed legacy project redirects
     ];
   },
 
