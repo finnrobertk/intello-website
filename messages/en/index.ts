@@ -39,7 +39,6 @@ const en = {
     highlightsTitle: "Recent highlights include:",
     highlights: [
       "Modernizing pension solutions at the Norwegian Public Service Pension Fund (SPK) into microservices.",
-      "Building a complete website and booking system using Next.js and Sanity.",
       "Exploring MVP solutions for automated test generation with AI."
     ],
     values: "My core values are clarity, precision, and collaboration."
