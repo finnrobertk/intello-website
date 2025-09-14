@@ -69,12 +69,6 @@ const en = {
         "Led architecture and implementation to decompose a monolith into independently deployable microservices.",
       tags: ["Kotlin", "Java", "Microservices"],
     },
-    artemova: {
-      title: "Next.js marketing site",
-      description:
-        "Designed and built a fast, SEO-friendly marketing site with modern React tooling.",
-      tags: ["React"],
-    },
     aimvp: {
       title: "AI MVP: Auto test generation",
       description:
