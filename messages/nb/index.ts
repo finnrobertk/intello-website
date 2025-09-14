@@ -70,12 +70,6 @@ const nb = {
         "Ledet arkitektur og implementasjon for å dele opp en monolitt i selvstendige mikrotjenester.",
       tags: ["Kotlin", "Java", "Mikrotjenester"],
     },
-    artemova: {
-      title: "Next.js-side for salong",
-      description:
-        "Designet og bygget et raskt, SEO-vennlig nettsted med moderne React-verktøy.",
-      tags: ["React"],
-    },
     aimvp: {
       title: "AI MVP: Automatisk testgenerering",
       description:
