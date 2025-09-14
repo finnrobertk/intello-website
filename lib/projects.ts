@@ -25,7 +25,12 @@ export function getProject(locale: string, slug: string): { meta: ProjectMeta; c
   if (!file) throw new Error(`Project not found: ${slug} (${locale})`);
   const src = fs.readFileSync(file, "utf8");
   const { data, content } = matter(src);
-  return { meta: data as ProjectMeta, content };
+  const meta = data as ProjectMeta;
+  // Validate that the frontmatter slug matches the requested slug
+  if (!meta?.slug || meta.slug !== slug) {
+    throw new Error(`Project not found: ${slug} (${locale})`);
+  }
+  return { meta, content };
 }
 
 export function listProjects(locale: string): ProjectMeta[] {

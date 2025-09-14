@@ -71,7 +71,7 @@ const nb = {
       tags: ["Kotlin", "Java", "Mikrotjenester"],
     },
     artemova: {
-      title: "naturligfake.no: Next.js-side for salong",
+      title: "Next.js-side for salong",
       description:
         "Designet og bygget et raskt, SEO-vennlig nettsted med moderne React-verktøy.",
       tags: ["React"],
