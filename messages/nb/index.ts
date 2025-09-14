@@ -38,7 +38,6 @@ const nb = {
     highlightsTitle: "Noen høydepunkter fra de siste årene:",
     highlights: [
       "Modernisering av pensjonsløsninger i Statens pensjonskasse (SPK) til mikrotjenester.",
-      "Bygget komplett nettside og booking med Next.js og Sanity.",
       "Utforsket MVP-løsninger for automatisert testgenerering med AI."
     ],
     values: "Verdiene mine er klarhet, presisjon og samarbeid."
