@@ -19,7 +19,7 @@ export default async function ProjectDetail({
     const res = getProject(locale, slug);
     meta = res.meta;
     content = res.content;
-  } catch (e) {
+  } catch {
     notFound();
   }
 
